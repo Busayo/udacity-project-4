@@ -22,7 +22,7 @@ File Summary:
 * Source the virtual environment: source venv/bin/activate
 * Run make install to install the necessary dependencies
 
-## Then
+## To run the app
 
 * Standalone: python app.py
 * Run in Docker: ./run_docker.sh
