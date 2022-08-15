@@ -17,7 +17,7 @@ File Summary:
 * run_kubernetes.sh - contains commands used to run K8s pod locally
 * make_prediction.sh - used to run predictions
 
-##How to run app
+## How to run app
 * Create a virtual environment with python3 -m venv venv
 * Source the virtual environment: source venv/bin/activate
 * Run make install to install the necessary dependencies
