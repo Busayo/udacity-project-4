@@ -17,14 +17,24 @@ File Summary:
 * run_kubernetes.sh - contains commands used to run K8s pod locally
 * make_prediction.sh - used to run predictions
 
-## How to setup environment
+## How to setup environment (on AWS Cloud9 and locally)
 * Create a virtual environment with python3 -m venv venv
 * Source the virtual environment: source venv/bin/activate
-* Run make install to install the necessary dependencies
+* Run make install and make lint to install the necessary dependencies and to check for errors in Dockerfile
 
-## To run the app
+## To run on AWS Cloud9
 
-* Standalone: python app.py
-* Run in Docker: ./run_docker.sh
-* Run in Kubernetes: ./upload_docker.sh && ./run_kubernetes.sh
-* Having the application running in container, in a separate terminal run ./make_prediction.sh
+* Run a local container and test if app is successfully launched - ./run_docker.sh
+* Run prediction - ./make_prediction.sh
+* Upload Docker image to remote repository - ./upload_docker.sh
+* Start minikube cluster - run minikube start
+* Deploy container with Minikube - ./run_kubernetes.sh
+* Run prediction - ./make_prediction.sh
+* You can also run python script alone - python app.py
+
+## To run the app locally
+* Make sure Docker, minikube and kubectl are installed on local machine.
+* Same steps above. Make sure to edit the ./run_kubernetes.sh file to match local minikube configuration and image created in the upload_docker.sh file. The run_kubernetes.sh file uses kubectl to create the required pods.
+
+
+
